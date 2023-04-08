@@ -10,7 +10,7 @@ class Employee extends Model
     use HasFactory;
     
     public $table="employees";
-    protected $fillable=['id','first_name','last_name','compancy_id','email','phone'];
+    protected $fillable=['id','first_name','last_name','compancy_id','email','phone','multipal_email'];
 
     public function compancy()
     {

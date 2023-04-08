@@ -19,6 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('last_name')->nullable();
             $table->foreignId('company_id')->constrained();
             $table->string('email')->nullable();
+            $table->string('multipal_email')->nullable();
             $table->string('phone')->nullable();
             $table->timestamps();       
         });

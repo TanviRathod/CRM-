@@ -6,6 +6,8 @@ use App\Http\Controllers\EmployeeController;
 use App\Models\Company;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+// use Analytics;
+// use Spatie\Analytics\Period;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +20,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     //$analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+//     return view('welcome');
+// });
+// Route::get('/test', function () {
+//   // $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+//     return view('welcome');
+// });
 
 Auth::routes();
 

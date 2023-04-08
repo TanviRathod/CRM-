@@ -33,6 +33,10 @@
                     <input type="email" class="form-control email" name="email" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Multipal Email</label>
+                    <input type="email" class="form-control multipal_email  " name="multipal_email[]" placeholder="Enter Multipal Email">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Phone</label>
                     <input type="text" class="form-control phone" name="phone"  placeholder="Enter Phone">
                 </div>
@@ -56,6 +60,7 @@
         var last_name=$('.last_name').val();
         var compancy_id = $('select#compancy_id option:selected').val();
         var email=$('.email').val();
+        var multipal_email=$('.multipal_email').val();
         var phone=$('.phone').val();
 
         $.ajax({
@@ -66,6 +71,7 @@
                 last_name:last_name,
                 compancy_id:compancy_id,
                 email:email,
+                multipal_email:multipal_email,
                 phone:phone,
             },
             dataType: "json",

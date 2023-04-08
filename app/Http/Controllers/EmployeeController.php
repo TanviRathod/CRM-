@@ -17,7 +17,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return view('employee.index');
+        $employee=Employee::get('multipal_email');
+        return view('employee.index',compact($employee));
     }
 
     /**
@@ -51,6 +52,7 @@ class EmployeeController extends Controller
         $employee->last_name=$request->last_name;
         $employee->company_id=$request->compancy_id;
         $employee->email=$request->email;
+        $employee->multipal_email=$request->multipal_email;
         $employee->phone=$request->phone;
         $employee->save();
         return response()->json(["status"=>"true"]);
